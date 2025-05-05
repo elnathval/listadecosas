@@ -1,0 +1,51 @@
+body {
+    margin: 0%;
+    background-color: #1a1a1a;
+    font-family: "Inter", sans-serif;
+}
+
+.adding-div {
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    border-style: solid;
+    border-width: 0px 0px 0.5vh 0px;
+    border-color: white;
+    padding-bottom: 0.2vh;
+    color: white;
+}
+
+.adding-div input[type=text] {
+    flex-grow: 9;
+    border-radius: 5px;
+}
+
+.adding-div button {
+    flex-grow: 1;
+    border-radius: 5px;
+}
+
+.orders-div {
+    color: white;
+}
+
+.orders-div div {
+    margin: 15px;
+    display: flex;
+    padding: 1vw;
+    border-radius: 1vh;
+    box-shadow: -1px -3px 35px 0px rgba(0,0,0,0.75) inset;
+}
+
+.orders-div div h1{
+    flex-grow: 12;
+}
+
+.orders-div div button{
+    flex-grow: 1;
+    border-radius: 20px;
+}
+
+.orders-div div h2{
+    flex-grow: 1;
+}
