@@ -4,6 +4,10 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+button {
+    font-size: 3vh;
+}
+
 .adding-div {
     display: flex;
     height: 7vh;
