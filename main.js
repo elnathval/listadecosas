@@ -1,6 +1,7 @@
 var texto = document.getElementById("objeto")
 var botonsubmit = document.getElementById("submit")
-
+var queryString = "";
+var urlParams;
 var listaCosas = [];
 
 document.getElementById("formulario").addEventListener("submit", function(event){
@@ -30,7 +31,8 @@ function añadir() {
     but2.setAttribute("orden", listaCosas.length)
     but2.setAttribute("onclick", "restar(this)")
     div.setAttribute("id", listaCosas.length)
-    num.setAttribute("id", `${listaCosas.length}-num`)    
+    num.setAttribute("id", `${listaCosas.length}-num`)  
+    titulo.setAttribute("id", `${listaCosas.length}-name`)  
 
     div.appendChild(titulo);
     div.appendChild(num);
@@ -61,4 +63,52 @@ function restar(elemento){
     if(listaCosas[orden] === 0){
         document.getElementById(`${orden}`).remove();
     }
+}
+
+$('document').ready(function(){
+    queryString = window.location.search;
+    urlParams = new URLSearchParams(queryString);
+
+    for (const [key, value] of urlParams.entries()) {
+        var div = document.createElement("div");
+        var titulo = document.createElement("h1");
+        var but1 = document.createElement("button");
+        var but2 = document.createElement("button");
+        var num = document.createElement("h2");
+
+        titulo.innerText = key;
+        but1.innerText = "+";
+        but2.innerText = "-";
+        num.innerText = value;
+
+        but1.setAttribute("orden", listaCosas.length)
+        but1.setAttribute("onclick", "sumar(this)")
+        but2.setAttribute("orden", listaCosas.length)
+        but2.setAttribute("onclick", "restar(this)")
+        div.setAttribute("id", listaCosas.length)
+        num.setAttribute("id", `${listaCosas.length}-num`)    
+
+        div.appendChild(titulo);
+        div.appendChild(num);
+        div.appendChild(but1);
+        div.appendChild(but2);
+
+        document.getElementById("orders-div").appendChild(div);
+
+        texto.value = "";
+
+        listaCosas.push(Number(value));
+    }
+});
+
+function copyLink(){
+    var link = window.location.href +  "?";
+    for(var i = 0; i < listaCosas.length; i++){
+        if(listaCosas[i] === 0){
+            continue;
+        }
+        link += document.getElementById(`${i}-name`).innerText + "=" + document.getElementById(`${i}-num`).innerText + "&";
+    }
+
+    navigator.clipboard.writeText(link);
 }
