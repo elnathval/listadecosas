@@ -1,0 +1,1 @@
+estoy puto cansado de que tenga que anotar todas las putas mierdas de comida en el puto whatsapp asi que he hecho esto del cabreo que tuve el otro dia cuando se nos olvidó pedir la comida de mi hermano en la puta fila basta ya
