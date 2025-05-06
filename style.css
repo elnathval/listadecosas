@@ -15,18 +15,24 @@ body {
     color: white;
 }
 
-.adding-div input[type=text] {
+.adding-div form input[type=text] {
     flex-grow: 9;
     border-radius: 5px;
 }
 
-.adding-div button {
+.adding-div form input[type=submit] {
     flex-grow: 1;
     border-radius: 5px;
 }
 
+.adding-div form {
+    display: flex;
+    width: 100%;
+}
+
 .orders-div {
     color: white;
+    padding-bottom: 4vh;
 }
 
 .orders-div div {
@@ -37,15 +43,38 @@ body {
     box-shadow: -1px -3px 35px 0px rgba(0,0,0,0.75) inset;
 }
 
-.orders-div div h1{
-    flex-grow: 12;
-}
+
 
 .orders-div div button{
-    flex-grow: 1;
+    width: 5vh;
     border-radius: 20px;
+    flex-grow: 1;
+}
+
+.orders-div div h1{
+    width: 70%;
 }
 
 .orders-div div h2{
-    flex-grow: 1;
+    width: 10%;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #141414;
+    color: white;
+    font-size: 2vh;
+    padding: 1vh;
+}
+
+footer a {
+    color: white;
+}
+
+footer p {
+    margin: 0%;
 }

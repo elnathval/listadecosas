@@ -3,6 +3,11 @@ var botonsubmit = document.getElementById("submit")
 
 var listaCosas = [];
 
+document.getElementById("formulario").addEventListener("submit", function(event){
+    event.preventDefault();
+    añadir();
+  });
+
 function añadir() {
     if(texto.value === ""){
         console.log("huh");
