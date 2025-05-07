@@ -86,7 +86,8 @@ $('document').ready(function(){
         but2.setAttribute("orden", listaCosas.length)
         but2.setAttribute("onclick", "restar(this)")
         div.setAttribute("id", listaCosas.length)
-        num.setAttribute("id", `${listaCosas.length}-num`)    
+        num.setAttribute("id", `${listaCosas.length}-num`)
+        titulo.setAttribute("id", `${listaCosas.length}-name`)
 
         div.appendChild(titulo);
         div.appendChild(num);
@@ -116,4 +117,8 @@ async function copyLink(){
     setTimeout(() => {
         document.getElementById("alert").classList.add("hidden")
     }, 2000)
+}
+
+function info(){
+    
 }

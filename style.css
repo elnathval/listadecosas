@@ -93,18 +93,20 @@ footer a {
 
 footer p {
     margin: 0%;
-    order: 1;
     padding: 2vh;
 }
 
-footer img {
+footer div img {
     height: 2vh;
-    order: 2;
-    padding: 2vh;
+    margin: 2vh;
 }
 
-footer img:hover {
+footer div img:hover {
     cursor: pointer;
+}
+
+footer div {
+    display: flex;
 }
 
 .hidden {
