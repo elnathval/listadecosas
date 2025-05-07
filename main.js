@@ -101,7 +101,7 @@ $('document').ready(function(){
     }
 });
 
-function copyLink(){
+async function copyLink(){
     var link = window.location.href +  "?";
     for(var i = 0; i < listaCosas.length; i++){
         if(listaCosas[i] === 0){
@@ -111,4 +111,9 @@ function copyLink(){
     }
 
     navigator.clipboard.writeText(link);
+
+    document.getElementById("alert").classList.remove("hidden");
+    setTimeout(() => {
+        document.getElementById("alert").classList.add("hidden")
+    }, 2000)
 }

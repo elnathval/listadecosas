@@ -43,7 +43,7 @@ button {
 
 .orders-div {
     color: white;
-    padding-bottom: 4vh;
+    padding-bottom: 6vh;
 }
 
 .orders-div div {
@@ -105,5 +105,25 @@ footer img {
 
 footer img:hover {
     cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#alert {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    bottom: 8vh;
+    width: 100%;
+    font-size: 1.8vh;
+    color: white;
+}
+
+#alert h2 {
+    background-color: #141414;
+    padding: 1vh;
+    border-radius: 10px;
 }
 
