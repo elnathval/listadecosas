@@ -103,7 +103,7 @@ $('document').ready(function(){
 });
 
 async function copyLink(){
-    var link = window.location.href +  "?";
+    var link = window.location.href.split("?").at(0)  +  "?";
     for(var i = 0; i < listaCosas.length; i++){
         if(listaCosas[i] === 0){
             continue;
